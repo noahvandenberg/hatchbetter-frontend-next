@@ -26,7 +26,7 @@ For the backend API server, please visit the [Hatch Better Full Stack Assessment
 
    ```bash
    git clone https://github.com/noahvandenberg/hatchbetter-frontend-next.git
-   cd marvelous-frontend
+   cd hatchbetter-frontend-next
    ```
 
 2. Install dependencies.
@@ -35,7 +35,15 @@ For the backend API server, please visit the [Hatch Better Full Stack Assessment
    yarn install
    ```
 
-3. Start the development server.
+3. Create a `.env.local` file in the root directory of the project and add the following environment variables.
+
+   ```bash
+   NEXT_PUBLIC_API_URL=http://localhost:3001
+   ```
+
+   Replace `http://localhost:3001` with the URL of the Marvelous 2.0 Backend API server.
+
+4. Start the development server.
 
    ```bash
    yarn start

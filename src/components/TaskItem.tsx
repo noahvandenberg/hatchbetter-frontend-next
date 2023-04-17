@@ -12,7 +12,7 @@ type Todo = {
 function TaskItem({ item, search }: { item: Todo; search: string }) {
   const handleToggleDone = async () => {
     try {
-      await axios.patch('http://localhost:3001/api/todos', {
+      await axios.patch(`${process.env.NEXT_PUBLIC_API_URL}/api/todos`, {
         id: item.id,
         done: !item.done,
       });

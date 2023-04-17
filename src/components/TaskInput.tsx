@@ -10,7 +10,7 @@ function TaskInput({ search }: { search: string }) {
     e.preventDefault();
 
     try {
-      await axios.post('http://localhost:3001/api/todos', {
+      await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/todos`, {
         value: input,
         done: false,
       });

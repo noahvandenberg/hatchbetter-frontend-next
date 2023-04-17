@@ -2,6 +2,10 @@
 
 Marvelous 2.0 Frontend is a React-based web application for managing tasks. It provides an intuitive user interface for adding, updating, and deleting tasks, as well as searching and filtering tasks in both "To Do" and "Done" lists. The frontend is built using TypeScript, React, and CSS.
 
+This project is deployed on Vercel. You can visit the live application at [https://hatch.noahvandenberg.com](https://hatch.noahvandenberg.com).
+
+For the backend API server, please visit the [Hatch Better Full Stack Assessment Backend Repository](https://github.com/noahvandenberg/hatchbetter-backend-ts).
+
 ## Features
 
 - User-friendly interface for managing tasks

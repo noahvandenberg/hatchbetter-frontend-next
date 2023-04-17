@@ -10,6 +10,7 @@ Marvelous 2.0 Frontend is a React-based web application for managing tasks. It p
 - Real-time search functionality for both "To Do" and "Done" lists
 - Single Page Web App (SPA) architecture
 - Communicates with the Marvelous 2.0 Backend API server
+- Data synchronization between frontend and backend (60s polling interval)
 
 ## Requirements
 

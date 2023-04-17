@@ -9,7 +9,7 @@ function DeleteAllButton({ search }: { search: string }) {
     if (window.confirm('Are you sure you want to delete all tasks?')) {
       try {
         await axios.delete('http://localhost:3001/api/todos');
-        mutate('/api/todos', search);
+        mutate(['/api/todos', search]);
       } catch (error) {
         console.error('Error deleting tasks:', error);
       }

@@ -19,10 +19,14 @@ function TaskList({ title, search }: TaskListProps) {
   const { data, error, isLoading, isValidating } = useSWR<{
     todo: Todo[];
     done: Todo[];
-  }>(['/api/todos', search], (keyArray: string[]) => {
-    const [, searchValue] = keyArray;
-    return fetcher(`/api/todos?search=${searchValue}`);
-  });
+  }>(
+    ['/api/todos', search],
+    (keyArray: string[]) => {
+      const [, searchValue] = keyArray;
+      return fetcher(`/api/todos?search=${searchValue}`);
+    },
+    { refreshInterval: 60000 }
+  );
 
   const loading = isLoading;
   if (error)
@@ -31,7 +35,7 @@ function TaskList({ title, search }: TaskListProps) {
         <p className='pl-3'>{title}</p>
         <div className='flex-1 my-1 border-b border-black w-100' />
         <div className='flex flex-col space-y-2'>
-          <p>Error Loading Tasks</p>
+          {/* <p>Error Loading Tasks</p> */}
         </div>
       </div>
     );
@@ -41,7 +45,7 @@ function TaskList({ title, search }: TaskListProps) {
         <p className='pl-3'>{title}</p>
         <div className='flex-1 my-1 border-b border-black w-100' />
         <div className='flex flex-col space-y-2'>
-          <p>Loading......</p>
+          {/* <p>Loading......</p> */}
         </div>
       </div>
     );
